@@ -33,19 +33,55 @@ After installing the O.S. We need configure these settings:
  - Mouse integration (in alto di virtual box -> mouse integration)
  - To Unlock the windows server (insert -> ctrl+alt+del)
 
+Check your configuration in local server
+<br><img src="setting1.png" width=40% height="auto"><br><br>
 
 
 
+## Active Directory Overview e Terminology
+ - Domain -> collection of objects (users acc,computers acc, groups… and more)
+ - Domain Controller -> server with the active directory installed)
+ - Tree -> collection of a domains
+ - Forest -> collection of trees
+ - Global Catalog -> it’s a central repository containing a subset of attributes of all objects in the AD forest.
+ - DNS -> resolve a name to ip address
 
 
+## Methods to install Active Directory 
+ - Powershell (install windows feature AD Domain Services and ADDSDomainController)
+ - Server Manager (Add roles and features)
+ - DCPromo /Unattend: <path> (with a file, minimize errors)
 
 
+## Active Directory installation
+To install AD go to: manage -> add roles and features
+<br><img src="i1.png" width=40% height="auto"><br><br>
+<br><img src="i2.png" width=40% height="auto"><br><br>
+<br><img src="i3.png" width=40% height="auto"><br><br>
+<br><img src="i4.png" width=40% height="auto"><br><br>
 
+Click next until install.
 
+### Domain Controller Promotion
+After installation will pop up a warning 
+<br><img src="warning1.png" width=40% height="auto"><br><br>
+Click on Promote (it will promote the server in domain controller)
+Follow the images below:
+<br><img src="d1.png" width=40% height="auto"><br><br>
+<br><img src="d2.png" width=40% height="auto"><br><br>
+<br><img src="d3.png" width=40% height="auto"><br><br>
+In the first installation it will install the dns, so let uncheck if first installation.
+<br><img src="d4.png" width=40% height="auto"><br><br>
+<br><img src="d5.png" width=40% height="auto"><br><br>
+<br><img src="d6.png" width=40% height="auto"><br><br>
+Click next until finish and reboot the system.
 
-
-
-
+### Verify your installation
+You can see in your log screen your domain.
+<br><img src="v1.png" width=40% height="auto"><br><br>
+Another check to do:
+server manager -> Tools -> Active Directory Users and Computers -> it's present the domain RTS.LOCAL.
+<br><img src="v1.png" width=40% height="auto"><br><br>
 
 
 
