@@ -18,7 +18,7 @@ Active Directory is for almost any company or organization out there. It simplif
 ## Windows Server installation on Virtual Box
 
 1) Download the ISO from the following link: https://www.microsoft.com/evalcenter  -> select windows server -> select the version -> click (next to get started) download the ISO -> sign in and download.
-<br><img src="./Photos/down1.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/down1.png" width=60% height="./Photos/auto"><br><br>
 2) Download Virtual Box and install the OS.
 
 
@@ -33,7 +33,7 @@ After installing the O.S. We need configure these settings:
  - To Unlock the windows server (insert -> ctrl+alt+del)
 
 Check your configuration in local server
-<br><img src="./Photos/setting1.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/setting1.png" width=60% height="./Photos/auto"><br><br>
 
 
 
@@ -54,36 +54,36 @@ Check your configuration in local server
 
 ## Active Directory installation
 To install AD go to: manage -> add roles and features
-<br><img src="./Photos/i1.png" width=50% height="./Photos/auto"><br><br>
-<br><img src="./Photos/i2.png" width=50% height="./Photos/auto"><br><br>
-<br><img src="./Photos/i3.png" width=50% height="./Photos/auto"><br><br>
-<br><img src="./Photos/i4.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/i1.png" width=60% height="./Photos/auto"><br><br>
+<br><img src="./Photos/i2.png" width=60% height="./Photos/auto"><br><br>
+<br><img src="./Photos/i3.png" width=60% height="./Photos/auto"><br><br>
+<br><img src="./Photos/i4.png" width=60% height="./Photos/auto"><br><br>
 
 Click next until install.
 
 ### Domain Controller Promotion
 After installation will pop up a warning 
-<br><img src="./Photos/warning1.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/warning1.png" width=60% height="./Photos/auto"><br><br>
 Click on Promote (it will promote the server in domain controller)
 Follow the images below:
-<br><img src="./Photos/d1.png" width=50% height="./Photos/auto"><br><br>
-<br><img src="./Photos/d2.png" width=50% height="./Photos/auto"><br><br>
-<br><img src="./Photos/d3.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/d1.png" width=60% height="./Photos/auto"><br><br>
+<br><img src="./Photos/d2.png" width=60% height="./Photos/auto"><br><br>
+<br><img src="./Photos/d3.png" width=60% height="./Photos/auto"><br><br>
 In the first installation it will install the dns, so let uncheck if first installation.
-<br><img src="./Photos/d4.png" width=50% height="./Photos/auto"><br><br>
-<br><img src="./Photos/d5.png" width=50% height="./Photos/auto"><br><br>
-<br><img src="./Photos/d6.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/d4.png" width=60% height="./Photos/auto"><br><br>
+<br><img src="./Photos/d5.png" width=60% height="./Photos/auto"><br><br>
+<br><img src="./Photos/d6.png" width=60% height="./Photos/auto"><br><br>
 Click next until finish and reboot the system.
 
 ### Verify your installation
 You can see in your log screen your domain.
-<br><img src="./Photos/v1.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/v1.png" width=60% height="./Photos/auto"><br><br>
 first check to do:
 server manager -> Tools -> Active Directory Users and Computers -> it's present the domain RTS.LOCAL.
-<br><img src="./Photos/v2.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/v2.png" width=60% height="./Photos/auto"><br><br>
 second check to do:
 server manager -> Tools -> DNS -> forward lookup zones -> expand _msdcs.rts.local -> check if the Kerberos and LDAP services are present.
-<br><img src="./Photos/v3.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/v3.png" width=60% height="./Photos/auto"><br><br>
 
 We can check the installation with some commands:
  - get-WindowsFeature
@@ -113,16 +113,16 @@ The schema defines which objects you can create and also defines its attributes.
 ### Schema Access
 Add the schema access
 Open run (windows +R) and write: regsvr32 schmmgmt.dll
-<br><img src="./Photos/sch1.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/sch1.png" width=60% height="./Photos/auto"><br><br>
 
 Now Open run (windows +R) and write: mmc -> file -> add/remove snap-ins -> select Active Directory Schema -> Ok
-<br><img src="./Photos/sch2.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/sch2.png" width=60% height="./Photos/auto"><br><br>
 To decide who is the schema master among the various domain controllers -> right click on the Active Directory Schema folder -> Operations Master -> change master schema .
-<br><img src="./Photos/sch3.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/sch3.png" width=60% height="./Photos/auto"><br><br>
 
 ### Modifying the Schema
 run -> mmc -> file- > add or remove snap-ins-> add active directory schema-> on attributes -> right click and create new attributes -> you cannot delete an attribute, you can only disable it.
-<br><img src="./Photos/sch4.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/sch4.png" width=60% height="./Photos/auto"><br><br>
 Check the new attributes on user -> properties-> on attributes -> to link it to the classes -> add it.
 
 
@@ -131,14 +131,14 @@ The global catalog records a partial list of attributes of all domains in the fo
 
 ### Configuring the Global Catalog
 tools -> active directory sites and services
-<br><img src="./Photos/glo1.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/glo1.png" width=60% height="./Photos/auto"><br><br>
 
 
 ## Add Computer Account to a domain
 on Active Directory users and computers you can create the user acc.
-<br><img src="./Photos/add1.png" width=50% height="./Photos/auto"><br><br>
-<br><img src="./Photos/add2.png" width=50% height="./Photos/auto"><br><br>
-<br><img src="./Photos/add3.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/add1.png" width=60% height="./Photos/auto"><br><br>
+<br><img src="./Photos/add2.png" width=60% height="./Photos/auto"><br><br>
+<br><img src="./Photos/add3.png" width=60% height="./Photos/auto"><br><br>
 
 add the computer of User1 to the domain :
 System -> change settings -> member of "insert the domain"
