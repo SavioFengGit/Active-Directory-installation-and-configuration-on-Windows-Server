@@ -1,4 +1,4 @@
-![image](https://github.com/SavioFengGit/Active-Directory-on-Windows-Server/assets/107345962/93aeb155-3d44-4eb2-9c13-ef8b769e2ba8)# Active-Directory-on-Windows-Server
+# Active-Directory-on-Windows-Server
 My Active Directory notes
 
 ## Introduction of Active Directory
@@ -105,6 +105,27 @@ Brief description of main tools:
  - Active Directory Sites and Services: This is a Microsoft Management Console (MMC) snap-in that provides a graphical user interface for administrators to manage the relationship between Domain Controllers, sites, and services within an Active Directory forest. It is used for managing organizations that have branches spread across different geographical locations but fall under the same domain.
  - Active Directory Domains and Trusts: This is a tool used to manage trust relationships between domains within an Active Directory forest. Trust relationships enable access to resources and can be either one-way or two-way.
  - Active Directory Schema: This is a blueprint that describes the rules about the type of objects that can be stored in the AD as well as the attributes related to these objects. The schema defines the content, and the structure of the object classes, and the object attributes used to create an object.
+
+## Active Directory Schema
+The schema defines which objects you can create and also defines its attributes. So if you define a user object, you also define its attributes.
+ - object classes (user, computer, group, etc.)
+ - attributes (tel. number, address, name, etc.)
+
+### Schema Access
+Add the schema access
+Open run (windows +R) and write: regsvr32 schmmgmt.dll
+<br><img src="sch1.png" width=40% height="auto"><br><br>
+
+Now Open run (windows +R) and write: mmc -> file -> add/remove snap-ins -> select Active Directory Schema -> Ok
+<br><img src="sch2.png" width=40% height="auto"><br><br>
+To decide who is the schema master among the various domain controllers -> right click on the Active Directory Schema folder -> Operations Master -> change master schema .
+<br><img src="sch3.png" width=40% height="auto"><br><br>
+
+### Modifying the Schema
+run -> mmc -> file- > add or remove snap-ins-> add active directory schema-> on attributes -> right click and create new attributes -> you cannot delete an attribute, you can only disable it.
+<br><img src="sch4.png" width=40% height="auto"><br><br>
+Check the new attributes on user -> properties-> on attributes -> to link it to the classes -> add it.
+
 
 
 
