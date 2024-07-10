@@ -135,13 +135,17 @@ tools -> active directory sites and services
 <br><img src="./Photos/glo1.png" width=50% height="./Photos/auto"><br><br>
 
 
+## Add Computer Account to a domain
+on Active Directory users and computers you can create the user acc.
+<br><img src="./Photos/add1.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/add2.png" width=50% height="./Photos/auto"><br><br>
+<br><img src="./Photos/add3.png" width=50% height="./Photos/auto"><br><br>
 
+add the computer of User1 to the domain :
+System -> change settings -> member of "insert the domain"
 
-
-
-
-
-
+### Verify the computer acc
+on active directory users and computer check the user in computers folder.
 
 
 
