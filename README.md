@@ -1,5 +1,4 @@
 # Active-Directory-on-Windows-Server
-My Active Directory notes
 
 ## Introduction of Active Directory
 Active Directory is a Microsoft service that provides centralized authentication and authorization to network resources. It’s used in business environments to simplify user management, control access to data, and enforce company security policies.
