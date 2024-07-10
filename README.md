@@ -1,4 +1,4 @@
-# Active-Directory-on-Windows-Server
+![image](https://github.com/SavioFengGit/Active-Directory-on-Windows-Server/assets/107345962/93aeb155-3d44-4eb2-9c13-ef8b769e2ba8)# Active-Directory-on-Windows-Server
 My Active Directory notes
 
 ## Introduction of Active Directory
@@ -79,13 +79,32 @@ Click next until finish and reboot the system.
 ### Verify your installation
 You can see in your log screen your domain.
 <br><img src="v1.png" width=40% height="auto"><br><br>
-Another check to do:
+first check to do:
 server manager -> Tools -> Active Directory Users and Computers -> it's present the domain RTS.LOCAL.
-<br><img src="v1.png" width=40% height="auto"><br><br>
+<br><img src="v2.png" width=40% height="auto"><br><br>
+second check to do:
+server manager -> Tools -> DNS -> forward lookup zones -> expand _msdcs.rts.local -> check if the Kerberos and LDAP services are present.
+<br><img src="v3.png" width=40% height="auto"><br><br>
 
+We can check the installation with some commands:
+ - get-WindowsFeature
+ - get-windowsfeature -name rsat
+ - get-windowsfeature -name rsat*
 
+We could install AD also with powershell commands 
+ - install-windowsFeature ad-domain-services
+ - install-ADDSDomain -DomainName rts.local -SiteName default-first-site-name -InstallDns
+ - install-windowsfeature rsat-role-tools
 
+## Tools
+Brief description of main tools:
 
+ - Active Directory Users and Computers (ADUC): This is a Microsoft Management Console (MMC) snap-in that provides a graphical user interface for administrators to manage objects such as users, groups, and computers within their Active Directory domains. It allows administrators to create and manage AD objects, such as users, computers, groups, and contacts, along with their attributes.
+ - Active Directory Administrative Center (ADAC): This is a tool provided by Microsoft that helps admins perform typical AD actions. It includes management features for Active Directory Recycle Bin, Fine-Grained Password Policy, and Windows PowerShell History Viewer.
+ - Active Directory module for Windows PowerShell: This is a PowerShell module that consolidates a group of cmdlets. You can use these cmdlets to manage your Active Directory domains, Active Directory Lightweight Directory Services (AD LDS) configuration sets, and Active Directory Database Mounting Tool instances in a single, self-contained package.
+ - Active Directory Sites and Services: This is a Microsoft Management Console (MMC) snap-in that provides a graphical user interface for administrators to manage the relationship between Domain Controllers, sites, and services within an Active Directory forest. It is used for managing organizations that have branches spread across different geographical locations but fall under the same domain.
+ - Active Directory Domains and Trusts: This is a tool used to manage trust relationships between domains within an Active Directory forest. Trust relationships enable access to resources and can be either one-way or two-way.
+ - Active Directory Schema: This is a blueprint that describes the rules about the type of objects that can be stored in the AD as well as the attributes related to these objects. The schema defines the content, and the structure of the object classes, and the object attributes used to create an object.
 
 
 
