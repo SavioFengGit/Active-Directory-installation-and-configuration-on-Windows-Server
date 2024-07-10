@@ -127,6 +127,31 @@ run -> mmc -> file- > add or remove snap-ins-> add active directory schema-> on 
 Check the new attributes on user -> properties-> on attributes -> to link it to the classes -> add it.
 
 
+## Global Catalog
+The global catalog records a partial list of attributes of all domains in the forest, supporting queries on resources in other domains in the forest. If there are domains in the same forest that want to talk to each other, they need this global catalog server to get the various information.
+
+### Configuring the Global Catalog
+tools -> active directory sites and services
+<br><img src="glo1.png" width=40% height="auto"><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br> <br>
